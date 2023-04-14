@@ -1,0 +1,31 @@
+<h1>Datos de compra</h1>
+<label for="id_email">Correo electronico: </label>
+<input  id="id_email" type="email" [(ngModel)]="email" placeholder="Escriba su correo electronico">
+<br>
+<label for="id_direccion">Direccion: </label>
+<input id="id_direccion" type="text" [(ngModel)]="direccion" placeholder="Escriba sus comentarios">
+<br>
+<label for="id_telefono">Telefono: </label>
+<input id="id_telefono" type="tel" [(ngModel)]="telefono" placeholder="Escriba su telefono">
+<br>
+<label for="id_comunidad">Comunidad: </label>
+<select id="id_comunidad" [(ngModel)]="comunidad">
+    <option value="madrid">Madrid</option>
+    <option value="aragon">Aragon</option>
+    <option value="andalucia">Andalucia</option>
+</select>
+<p>Forma de pago: </p>
+<fieldset>
+    Efectivo<input type="radio" [(ngModel)]="formapago" name="formapago" value="efectivo" />
+    <br>
+    Tarjeta<input type="radio" [(ngModel)]="formapago" name="formapago" value="tarjeta" />
+    <br>
+    Contra-reembolso<input type="radio" [(ngModel)]="formapago" name="formapago" value="contrareembolso" />
+</fieldset>
+               
+<br>
+<input type="checkbox" id="informacion" [(ngModel)]="informacion">
+<label for="informacion">Acepta recibir informacion de nuestros productos</label>
+<br>
+<button (click)="enviar()">Enviar</button>
+<p>{{resultado}}</p>
